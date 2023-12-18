@@ -329,14 +329,4 @@ text = "\U0001F436 \U0001F47B \U0001F631"
 bot.send_message(message.chat.id, text=text)
 bot.register_next_step_handler(message, ot1)
 
-
-@bot.message_handler( )
-def priv(message):
-if (message.text.lower() == 'здравствуй') or (message.text.lower() == 'здравствуйте') or (message.text.lower() == 'привет') :
-bot.send_message(message.chat.id, f'Здравствуйте, {message.from_user.first_name}')
-elif (message.text.lower() == 'пока') or (message.text.lower() == 'досвидания') or (message.text.lower() == 'до свидания'):
-bot.send_message(message.chat.id, f'До свидания, {message.from_user.first_name}. Спасибо за внимание!')
-else :
-bot.send_message(message.chat.id, 'Простите, я вас не понимаю. Напишите /help')
-
 bot.polling(none_stop=True)
